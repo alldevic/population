@@ -3,14 +3,14 @@ name: self-hosted
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
-    runs-on: deploy_prod
+    runs-on: population-sr
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Create .env
-        run: cp /home/deploy/appconfig/.env ./.env
+        run: cp /home/deploy/config/.env ./.env
       - name: Make up
         run: make up
