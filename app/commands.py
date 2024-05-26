@@ -1,8 +1,6 @@
-from curses import raw
 import sqlalchemy
 import pandas as pd
 import os
-from jinjasql import JinjaSql
 
 
 import raw_sql
@@ -19,7 +17,7 @@ engine = sqlalchemy.create_engine(
 )
 
 
-# Создание таблицы balance
+# Создание таблицы balance_d 
 def create_balance():
     engine.execute(raw_sql.create_table_balance)
 

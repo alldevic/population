@@ -11,7 +11,7 @@ SELECT
     b.payment,
     b.saldo_k
 FROM
-    balance b
+    balance_d b
 WHERE
     b.account_id = {{ p_account_id }}
 ORDER BY
@@ -38,7 +38,7 @@ SELECT
     NULL::int max,
     count(1) count
 FROM 
-    balance b
+    balance_d b
 WHERE
     b.account_id = {{ p_account_id }}
 

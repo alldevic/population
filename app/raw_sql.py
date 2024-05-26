@@ -1,4 +1,4 @@
-create_table_balance = """create table BALANCE
+create_table_balance = """create table BALANCE_D
     (
         id           SERIAL PRIMARY KEY,
         account_id   INT,
@@ -15,9 +15,9 @@ create_table_balance = """create table BALANCE
         code_account VARCHAR(15)
     );
 
-    create index IDX_CODE_ACCOUNT2 on BALANCE (ACCOUNT_ID, BALANCE_DATE);
+    create index IDX_CODE_ACCOUNT2 on BALANCE_D (ACCOUNT_ID, BALANCE_DATE);
     
-    create index IDX_CODE_ACCOUNT2_DESC on BALANCE (ACCOUNT_ID ASC NULLS LAST, BALANCE_DATE DESC NULLS LAST);"""
+    create index IDX_CODE_ACCOUNT2_DESC on BALANCE_D(ACCOUNT_ID ASC NULLS LAST, BALANCE_DATE DESC NULLS LAST);"""
 
 
 create_table_personal_account = """create table PERSONAL_ACCOUNT

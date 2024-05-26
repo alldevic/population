@@ -28,7 +28,7 @@
             b.accrual::REAL,
             b.balance_date
         FROM
-            balance b
+            balance_d b
         WHERE
             b.account_id = pa.id
         ORDER BY
